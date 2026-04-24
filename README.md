@@ -1,4 +1,4 @@
-# Dockerized Standalone LDAP Daemon
+# Dockerized OpenLDAP
 
 Quick and dirty OpenLDAP service for testing applications that authenticate to LDAP.
 
