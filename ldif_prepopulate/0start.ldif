@@ -1,0 +1,18 @@
+dn: ou=People,dc=example,dc=com
+objectClass: organizationalUnit
+ou: People
+
+dn: ou=DataGroup,dc=example,dc=com
+objectClass: organizationalUnit
+ou: DataGroup
+
+dn: ou=person,dc=example,dc=com
+ou: person
+objectClass: top
+objectClass: organizationalUnit
+
+dn: cn=user,dc=example,dc=com
+objectClass: groupOfNames
+objectClass: top
+cn: user
+member: cn=admin,cn=groupa,dc=example,dc=com

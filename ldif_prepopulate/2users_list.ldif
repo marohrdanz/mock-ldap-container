@@ -1,0 +1,117 @@
+## Player One Normal User
+dn:  CN=playerone,OU=People,DC=example,DC=com
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+title: Ready Player One
+uid: playerone
+sn: One
+telephoneNumber: 555-333-4444
+givenName: Player
+cn: playerone
+mail: playerone@example.com
+displayName: One,Player
+uidNumber: 10008
+gidNumber: 5008
+userPassword: playerone
+gecos: Player One
+loginShell: /bin/bash
+homeDirectory: /home/playerone
+localityName: Department of Fishes
+memberOf: CN=group1,OU=Girard,DC=example,DC=com
+memberOf: CN=group2,OU=Girard,DC=example,DC=com
+memberOf: CN=group3,OU=Data,DC=example,DC=com
+
+## Player Two Normal User
+dn:  CN=playertwo,OU=People,DC=example,DC=com
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+title: Ready Player Two
+uid: playertwo
+sn: Two
+telephoneNumber: 555-333-4422
+givenName: Player
+cn: playertwo
+mail: playertwo@example.com
+displayName: Two,Player
+uidNumber: 10008
+gidNumber: 5008
+userPassword: playertwo
+gecos: Player Two
+loginShell: /bin/bash
+homeDirectory: /home/playertwo
+localityName: Department of Fishes
+memberOf: CN=group1,OU=Girard,DC=example,DC=com
+memberOf: CN=group2,OU=Girard,DC=example,DC=com
+
+## User One Normal User
+dn:  CN=userone,OU=People,DC=example,DC=com
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+title: Normal User
+uid: userone
+sn: One
+telephoneNumber: 555-333-4435
+givenName: User
+cn: userone
+mail: userone@example.com
+displayName: One,User
+uidNumber: 10008
+gidNumber: 5008
+userPassword: userone
+gecos: User One
+loginShell: /bin/bash
+homeDirectory: /home/userone
+localityName: Department of Fishes
+memberOf: CN=group1,OU=Girard,DC=example,DC=com
+memberOf: CN=group2,OU=Girard,DC=example,DC=com
+memberOf: CN=group3,OU=Data,DC=example,DC=com
+
+## User Two: CN different from email
+dn:  CN=usertwo,OU=People,DC=example,DC=com
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+title: User with email different from cn
+uid: usertwo
+sn: Two
+telephoneNumber: 555-333-4321
+givenName: User
+cn: usertwo
+mail: user2@example.com
+displayName: Two,User
+uidNumber: 10008
+gidNumber: 5008
+userPassword: usertwo
+gecos: User Two
+loginShell: /bin/bash
+homeDirectory: /home/usertwo
+localityName: Department of Zebras
+memberOf: CN=group2,OU=Girard,DC=example,DC=com
+memberOf: CN=group3,OU=Data,DC=example,DC=com
+
+## User Three: No email
+dn:  CN=userthree,OU=People,DC=example,DC=com
+objectClass: inetOrgPerson
+objectClass: posixAccount
+objectClass: shadowAccount
+title: User with no email
+uid: userthree
+sn: Three
+telephoneNumber: 555-867-5309
+givenName: User
+cn: userthree
+displayName: Three,User
+uidNumber: 10008
+gidNumber: 5008
+userPassword: userthree
+gecos: User Three
+loginShell: /bin/bash
+homeDirectory: /home/userthree
+localityName: Department of Zebras
+memberOf: CN=group1,OU=Girard,DC=example,DC=com
+memberOf: CN=group3,OU=Data,DC=example,DC=com
+
+

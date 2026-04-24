@@ -1,0 +1,25 @@
+##
+##  Container to model Active Directory
+##
+
+services:
+  ldap:
+    build: .
+    image: ldap:demo
+    restart: always
+    container_name: ldap
+    networks:
+      - ldap-network
+    environment:
+      - TERM=xterm
+      - SLAPD_PASSWORD=secret
+      - SLAPD_DOMAIN=example.com
+      - SLAPD_ADDITIONAL_MODULES=memberof
+    ports:
+      - "9489:389"
+    volumes:
+      - ./ldif_prepopulate:/etc/ldap.dist/prepopulate
+
+networks:
+  ldap-network:
+    external: true
