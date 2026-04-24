@@ -23,11 +23,14 @@ Query this LDAP container:
 ## Return record for user with common name 'usertwo'
 ldapsearch -x -H ldap://localhost:9489 -b dc=example,dc=com -s sub "(CN=usertwo)"
 ## Search for users in 'group2'
-ldapsearch -x -H ldap://localhost:9489 -b dc=example,dc=com -s sub "(memberOf=CN=group2,OU=Girard,DC=example,DC=com)"
+ldapsearch -x -H ldap://localhost:9489 -b dc=example,dc=com \
+    -s sub "(memberOf=CN=group2,OU=Girard,DC=example,DC=com)"
 ## Return groups for user with common name 'usertwo'
-ldapsearch -x -H ldap://localhost:9489 -b dc=example,dc=com -s sub "(CN=usertwo)" memberOf
+ldapsearch -x -H ldap://localhost:9489 -b dc=example,dc=com \
+    -s sub "(CN=usertwo)" memberOf
 ## Return the title and display name for all users with 'User' in their title
-ldapsearch -x -H ldap://localhost:9489 -b dc=example,dc=com -s sub "(title=*User*)" title displayName
+ldapsearch -x -H ldap://localhost:9489 -b dc=example,dc=com \
+    -s sub "(title=*User*)" title displayName
 ## Return the title and display name for all users in group2
 ldapsearch -x -H ldap://localhost:9489 -b dc=example,dc=com \
    -s sub "(memberOf=CN=group2,OU=Girard,DC=example,DC=com)" \
