@@ -19,6 +19,12 @@ services:
       - "9489:389"
     volumes:
       - ./ldif_prepopulate:/etc/ldap.dist/prepopulate
+    healthcheck:
+      test: ["CMD", "ldapsearch", "-x", "-H", "ldap://localhost:389", "-b", "dc=example,dc=com", "-s", "sub", "(CN=usertwo)"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
 
 networks:
   ldap-network:
